@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jun/CLionProjects/CSED101/ASSN4/20190766_assn4.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+math.h
+-
+limits.h
+-
+time.h
+-
+
