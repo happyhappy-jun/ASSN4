@@ -11,7 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da62c182-006d-464a-bec4-225619a45c4d" name="Default Changelist" comment="" />
+    <list default="true" id="da62c182-006d-464a-bec4-225619a45c4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ppm-converter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +26,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="57280" />
+    <option name="totalTimeSeconds" value="58045" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -105,7 +109,7 @@
       <workItem from="1574423143581" duration="26042000" />
       <workItem from="1574487937532" duration="25967000" />
       <workItem from="1574582106319" duration="7641000" />
-      <workItem from="1574642157653" duration="4437000" />
+      <workItem from="1574642157653" duration="5912000" />
     </task>
     <task id="LOCAL-00001" summary="final">
       <created>1574647528961</created>
