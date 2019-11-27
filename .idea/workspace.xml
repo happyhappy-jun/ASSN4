@@ -14,14 +14,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da62c182-006d-464a-bec4-225619a45c4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Image/pow_test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/pow_test_result.png" afterDir="false" />
+    <list default="true" id="da62c182-006d-464a-bec4-225619a45c4d" name="Default Changelist" comment="update report progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20190766_assn4.c" beforeDir="false" afterPath="$PROJECT_DIR$/20190766_assn4.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assn4.md" beforeDir="false" afterPath="$PROJECT_DIR$/assn4.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ASSN4" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ASSN4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/20190766_assn4.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/20190766_assn4.c.o" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +27,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="64672" />
+    <option name="totalTimeSeconds" value="65068" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -121,7 +115,7 @@
       <workItem from="1574650708578" duration="179000" />
       <workItem from="1574673418760" duration="2360000" />
       <workItem from="1574765960103" duration="1869000" />
-      <workItem from="1574820041411" duration="3796000" />
+      <workItem from="1574820041411" duration="4226000" />
     </task>
     <task id="LOCAL-00001" summary="final">
       <created>1574647528961</created>
@@ -144,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574649562817</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update report progress">
+      <created>1574878083017</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574878083017</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,11 +154,63 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ROOT_NAMES" value="true" />
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
+              <option name="SHOW_ROOT_NAMES" value="true" />
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -166,6 +219,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="final" />
     <MESSAGE value="Remove unnecessary file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary file" />
+    <MESSAGE value="update report progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="update report progress" />
   </component>
 </project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="00bae1cc-9161-4394-bd80-d12a17cc7dbf" name="PLUS" url="http://plus.or.kr">
+        <fileTransfer host="plus.or.kr" port="2222" rootFolder="/home/happyhappy/CSED101" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
