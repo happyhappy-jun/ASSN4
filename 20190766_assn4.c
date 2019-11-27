@@ -8,8 +8,8 @@
 #define RED 0
 #define GREEN 1
 #define LENGTH 70 //buf length for filename, more doesn't hurt!
-#define max(x, y) (((x) > (y)) ? (x) : (y)) //min max macro
-#define min(x, y) (((x) < (y)) ? (x) : (y))
+#define MAX(x, y) (((x) > (y)) ? (x) : (y)) //min max macro
+#define MIN(x, y) (((x) < (y)) ? (x) : (y))
 
 typedef unsigned int pixel[3]; //pixel data type
 
@@ -20,22 +20,22 @@ typedef struct {
 
 typedef struct {
     int x, y;
-float evaluation;
+    double evaluation;
 } shift_t; //shift data type, x,y value and evaluation value for each method
 
 typedef image_t *image; //struct pointer for image
 
-image readPPM(FILE *fp);
+image read_ppm(FILE *fp);
 
-void writePPM(image img, const char *filename);
+void write_ppm(image img, const char *filename);
 
-image fillImage(image img, shift_t rsft, shift_t gsft); //fill image structure with given shift value, fill only duplicated area
+image fill_image(image img, shift_t red_shift, shift_t green_shift); //fill image structure with given shift value, fill only duplicated area
 
 image alloc_img(unsigned int width, unsigned int height); //alloc img, and data
 
 void free_img(image img); //free img and data
 
-unsigned int getRGB(image img, int mode, unsigned int x, unsigned int y);
+unsigned int get_rgb(image img, int mode, unsigned int x, unsigned int y);
 
 shift_t SSD(image img, int mode); //Sum of Squared Differences
 
@@ -48,7 +48,7 @@ int main() {
     char filename[LENGTH], temp[LENGTH]; //file names
     char outfile[LENGTH];
     image img = NULL; //init img struct
-    FILE *fp;
+    FILE *fp = NULL;
     do {
         printf("\n===================\n");
         if (img == NULL)printf("[1] 이미지 불러오기\n");
@@ -69,7 +69,7 @@ int main() {
                 }
                 if (img != NULL) { //if img is loaded
                     free_img(img); //free it
-                    if ((img = readPPM(fp)) != NULL) { //read img, if fail print error
+                    if ((img = read_ppm(fp)) != NULL) { //read img, if fail print error
                         printf("이미지 변경을 완료했습니다.\n");
                         strcpy(filename, temp); //change display filename (case for img is loaded, but change target is unable to open)
                         break;
@@ -77,7 +77,7 @@ int main() {
                         printf("Error while reading image\nReturning Main menu\n\n");
                         break;
                     }
-                } else if ((img = readPPM(fp)) != NULL) { //if img is not loaded, read it. Fail -> break
+                } else if ((img = read_ppm(fp)) != NULL) { //if img is not loaded, read it. Fail -> break
                     printf("이미지 읽기를 완료했습니다.\n");
                     strcpy(filename, temp);
                     break;
@@ -95,11 +95,11 @@ int main() {
                 r_shift = SSD(img, RED); //calc shift for each channel
                 g_shift = SSD(img, GREEN);
                 printf("Elapsed time: %.3f sec\n", (clock() - begin) / CLOCKS_PER_SEC); //print elapsed time
-                image ssd = fillImage(img, r_shift, g_shift); //fill image with given shifts
+                image ssd = fill_image(img, r_shift, g_shift); //fill image with given shifts
                 strcpy(temp, filename); //copy file name to temp for strtok
                 //make file name with sprintf, strtok will cut file name before .ppm
                 sprintf(outfile, "%s_%s_R%d_%d_G%d_%d.ppm", strtok(temp, "."), "SSD", r_shift.x, r_shift.y, g_shift.x, g_shift.y);
-                writePPM(ssd, outfile); //write image to ppm file
+                write_ppm(ssd, outfile); //write image to ppm file
                 printf("===================\n");
                 printf("SSD - R:[%d, %d] G:[%d, %d]\n결과 이미지 파일: %s\n", r_shift.x, r_shift.y, g_shift.x, g_shift.y, outfile);
                 printf("===================\n");
@@ -117,10 +117,10 @@ int main() {
                 g_shift = NCC(img, GREEN);
                 end = clock();
                 printf("Elapsed time: %.3f sec\n", (end - begin) / CLOCKS_PER_SEC);
-                image ncc = fillImage(img, r_shift, g_shift);
+                image ncc = fill_image(img, r_shift, g_shift);
                 strcpy(temp, filename);
                 sprintf(outfile, "%s_%s_R%d_%d_G%d_%d.ppm", strtok(temp, "."), "NCC", r_shift.x, r_shift.y, g_shift.x, g_shift.y);
-                writePPM(ncc, outfile);
+                write_ppm(ncc, outfile);
                 printf("===================\n");
                 printf("NCC - R:[%d, %d] G:[%d, %d]\n결과 이미지 파일: %s\n", r_shift.x, r_shift.y, g_shift.x, g_shift.y, outfile);
                 printf("===================\n");
@@ -148,11 +148,11 @@ image alloc_img(const unsigned int width, const unsigned int height) {
     return img;
 }
 
-image readPPM(FILE *fp) {
+image read_ppm(FILE *fp) {
     image img;
     char format; //magic num
     unsigned int i, num, w, h, d; //var's
-    i = fscanf(fp, "%c%d %u %u %u\n", &format, &num, &w, &h, &d); //read header
+    i = (unsigned int) fscanf(fp, "%c%u %u %u %u\n", &format, &num, &w, &h, &d); //read header
     if (format != 'P' || num != 3 || i < 5 || d != 255) return NULL;
     img = alloc_img(w, h); //alloc pixels to img
     if (img != NULL) {
@@ -164,25 +164,25 @@ image readPPM(FILE *fp) {
     return NULL;
 }
 
-image fillImage(image img, shift_t rsft, shift_t gsft) {
-    int xs = max(max(rsft.x, gsft.x), 0);//max x start coordinate (+ is right -> max)
-    int ys = min(min(rsft.y, gsft.y), 0);//min y start coordinate (- is down -> min)
+image fill_image(image img, shift_t red_shift, shift_t green_shift) {
+    int xs = MAX(MAX(red_shift.x, green_shift.x), 0);//max x start coordinate (+ is right -> max)
+    int ys = MIN(MIN(red_shift.y, green_shift.y), 0);//min y start coordinate (- is down -> min)
     unsigned int walk_x, walk_y, width, height;
-    width = rsft.x * gsft.x < 0 ? img->width - abs(rsft.x) - abs(gsft.x) : img->width - max(abs(rsft.x), abs(gsft.x)); //calc new width and height
-    height = (rsft.y * gsft.y < 0) ? img->height - abs(rsft.y) - abs(gsft.y) : img->height - max(abs(rsft.y), abs(gsft.y));
+    width = red_shift.x * green_shift.x < 0 ? img->width - abs(red_shift.x) - abs(green_shift.x) : img->width - MAX(abs(red_shift.x),abs(green_shift.x)); //calc new width and height
+    height = (red_shift.y * green_shift.y < 0) ? img->height - abs(red_shift.y) - abs(green_shift.y) : img->height - MAX(abs(red_shift.y), abs(green_shift.y));
     image adjusted = alloc_img(width, height); //alloc registered image
     for (walk_x = 0; walk_x < adjusted->width; walk_x++) { //walk through all pixels (of registered)
         for (walk_y = 0; walk_y < adjusted->height; walk_y++) {
             //get shifted pixel value
-            adjusted->data[walk_y * adjusted->width + walk_x][0] = getRGB(img, 0, walk_x + xs - rsft.x, walk_y + rsft.y - ys);
-            adjusted->data[walk_y * adjusted->width + walk_x][1] = getRGB(img, 1, walk_x + xs - gsft.x, walk_y + gsft.y - ys);
-            adjusted->data[walk_y * adjusted->width + walk_x][2] = getRGB(img, 2, walk_x + xs, walk_y + abs(ys));
+            adjusted->data[walk_y * adjusted->width + walk_x][0] = get_rgb(img, 0, walk_x + xs - red_shift.x, walk_y + red_shift.y - ys);
+            adjusted->data[walk_y * adjusted->width + walk_x][1] = get_rgb(img, 1, walk_x + xs - green_shift.x, walk_y + green_shift.y - ys);
+            adjusted->data[walk_y * adjusted->width + walk_x][2] = get_rgb(img, 2, walk_x + xs, walk_y + abs(ys));
         }
     }
     return adjusted;
 }
 
-void writePPM(image img, const char *filename) {
+void write_ppm(image img, const char *filename) {
     unsigned int i;
     FILE *fp = fopen(filename, "w");
     fprintf(fp, "P3 %d %d 255\n", img->width, img->height); //write header
@@ -197,21 +197,22 @@ void free_img(image img) {
     free(img); //free img pointer
 }
 
-unsigned int getRGB(image img, const int mode, const unsigned int x, const unsigned int y) { //0 Red, 1 blue 2 green
+unsigned int get_rgb(image img, int mode, unsigned int x, unsigned int y) { //0 Red, 1 blue 2 green
     return img->data[y * img->width + x][mode]; //get pixel data from 1D-array based on x and y value
 }
 
 shift_t SSD(image img, const int mode) { //MODE 0 Red 2 Green
     shift_t sft = {-15, -15, (float) INT_MAX}; //smaller is better -> initial evaluation is INT_MAX
-    int I1, I2, shift_x, shift_y, walk_x, walk_y;
-    float eval;
+    unsigned int I1, I2, walk_x, walk_y;
+    int shift_x, shift_y;
+    double eval;
     for (shift_x = -15; shift_x < 16; shift_x++) { //walk through all possible shifts
         for (shift_y = -15; shift_y < 16; shift_y++) {
             eval = 0; //reset evaluation
             for (walk_x = 0; walk_x < img->width - abs(shift_x); walk_x++) {
                 for (walk_y = 0; walk_y < img->height - abs(shift_y); walk_y++) {
-                    I1 = getRGB(img, mode, walk_x + abs(min(shift_x, 0)), walk_y + abs(max(shift_y, 0))); //get shifted pixel data
-                    I2 = getRGB(img, 2, walk_x + abs(max(shift_x, 0)), walk_y + abs(min(shift_y, 0)));
+                    I1 = get_rgb(img, mode, walk_x + abs(MIN(shift_x, 0)), walk_y + abs(MAX(shift_y, 0))); //get shifted pixel data
+                    I2 = get_rgb(img, 2, walk_x + abs(MAX(shift_x, 0)), walk_y + abs(MIN(shift_y, 0)));
                     eval += (I1 - I2) * (I1 - I2); //simple multiplication is faster than pow(I1-I2,2)!!!
                 }
             }
@@ -227,18 +228,18 @@ shift_t SSD(image img, const int mode) { //MODE 0 Red 2 Green
 }
 
 shift_t NCC(image img, const int mode) { //MODE 0 Red 2 Green
-    int I1, I2;
+    unsigned int I1, I2, walk_x, walk_y;
+    int shift_x, shift_y;
     unsigned long long sumI12, sumI1sq, sumI2sq;
-    float eval;
+    double eval;
     shift_t sft = {-15, -15, -1}; //min evaluation is -1
-    int shift_x, shift_y, walk_x, walk_y;
     for (shift_x = -15; shift_x < 16; shift_x++) { //walk through all shift
         for (shift_y = -15; shift_y < 16; shift_y++) {
             sumI12 = 0, sumI1sq = 0, sumI2sq = 0;
             for (walk_x = 0; walk_x < img->width - abs(shift_x); walk_x++) { //walk through all pixels
                 for (walk_y = 0; walk_y < img->height - abs(shift_y); walk_y++) {
-                    I1 = getRGB(img, mode, walk_x + abs(min(shift_x, 0)), walk_y + abs(max(shift_y, 0)));
-                    I2 = getRGB(img, 2, walk_x + abs(max(shift_x, 0)), walk_y + abs(min(shift_y, 0)));
+                    I1 = get_rgb(img, mode, walk_x + abs(MIN(shift_x, 0)), walk_y + abs(MAX(shift_y, 0)));
+                    I2 = get_rgb(img, 2, walk_x + abs(MAX(shift_x, 0)), walk_y + abs(MIN(shift_y, 0)));
                     sumI12 += I1 * I2; //continuous addition to each values
                     sumI1sq += I1 * I1;
                     sumI2sq += I2 * I2;
