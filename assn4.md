@@ -93,6 +93,19 @@ int main
 			wirte img to outfile
 			print result
 			free SSDed or NCCed image
+			
+shift ssd and ncc
+    init shift with INTMAX(ssd), -1 (NCC)
+    for x_shift -15~15
+        for y_shift -15~15
+            eval = 0
+            for all pixels
+                eval += calcuation
+            finalize eval
+            if eval is better than previous stored eval
+                update shift and eval
+    return best_shift
+
 ```
 
 위의 Psuedo code를 flowchart로 표현한다면 다음과 같다.  출력부의 이름을 출력하는 부분은 알고리즘과 별개이므로 생략했다. 

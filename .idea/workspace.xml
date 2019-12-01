@@ -15,7 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da62c182-006d-464a-bec4-225619a45c4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/lena_test_NCC_R-8_-1_G-7_15.ppm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ppm-converter/P3_house2.ppm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ppm-converter/e3.ppm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ppm-converter/entrpizer.py" afterDir="false" />
@@ -39,6 +38,8 @@
       <change afterPath="$PROJECT_DIR$/ppm-converter/tree_1shifted.ppm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ppm-converter/west_1.ppm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ppm-converter/west_1shifted.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assn4.md" beforeDir="false" afterPath="$PROJECT_DIR$/assn4.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ppm-converter" beforeDir="false" afterPath="$PROJECT_DIR$/ppm-converter" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +52,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="76811" />
+    <option name="totalTimeSeconds" value="77601" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -146,7 +147,7 @@
       <workItem from="1574924971417" duration="253000" />
       <workItem from="1574925383859" duration="327000" />
       <workItem from="1575016342883" duration="8880000" />
-      <workItem from="1575186336794" duration="3949000" />
+      <workItem from="1575186336794" duration="5059000" />
     </task>
     <task id="LOCAL-00001" summary="final">
       <created>1574647528961</created>
