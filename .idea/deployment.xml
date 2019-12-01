@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="PLUS" />
+  <component name="PublishConfigData" serverName="PLUS" uploadOnCheckin="00bae1cc-9161-4394-bd80-d12a17cc7dbf">
+    <option name="myUploadOnCheckinName" value="PLUS" />
+  </component>
 </project>

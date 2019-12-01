@@ -15,32 +15,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da62c182-006d-464a-bec4-225619a45c4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ppm-converter/P3_house2.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/e3.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/entrpizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/falls_1.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/house_1.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/leeeeena.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/leena.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/lena.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/lena_test.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/mountainsshifted.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/ppmwrite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/prague.binary.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/shifter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/test10.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/test11.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/test12.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/test123.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/test9.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/testlkh3.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/tree_1.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/tree_1shifted.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/west_1.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ppm-converter/west_1shifted.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assn4.md" beforeDir="false" afterPath="$PROJECT_DIR$/assn4.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ppm-converter" beforeDir="false" afterPath="$PROJECT_DIR$/ppm-converter" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +29,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="77601" />
+    <option name="totalTimeSeconds" value="77875" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -70,6 +47,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="unajun &lt;bjyoon513@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -147,7 +129,7 @@
       <workItem from="1574924971417" duration="253000" />
       <workItem from="1574925383859" duration="327000" />
       <workItem from="1575016342883" duration="8880000" />
-      <workItem from="1575186336794" duration="5059000" />
+      <workItem from="1575186336794" duration="5696000" />
     </task>
     <task id="LOCAL-00001" summary="final">
       <created>1574647528961</created>
@@ -184,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575190233596</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Final report">
+      <created>1575191555719</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575191555719</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +245,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="final" />
     <MESSAGE value="Remove unnecessary file" />
     <MESSAGE value="update report progress" />
