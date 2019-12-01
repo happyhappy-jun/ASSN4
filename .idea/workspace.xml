@@ -14,27 +14,32 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da62c182-006d-464a-bec4-225619a45c4d" name="Default Changelist" comment="update report progress">
-      <change afterPath="$PROJECT_DIR$/Image/image_change.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/invalid_input.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/lena.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/lenancc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/normale_process.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/test5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/test5ncc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/test5ssd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/wrong_image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20190766_assn4.c" beforeDir="false" afterPath="$PROJECT_DIR$/20190766_assn4.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assn4.md" beforeDir="false" afterPath="$PROJECT_DIR$/assn4.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ASSN4" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ASSN4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/20190766_assn4.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/20190766_assn4.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/tester.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test1_SSD_R0_2_G0_2.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tester.c" beforeDir="false" afterPath="$PROJECT_DIR$/tester.c" afterDir="false" />
+    <list default="true" id="da62c182-006d-464a-bec4-225619a45c4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/lena_test_NCC_R-8_-1_G-7_15.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/P3_house2.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/e3.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/entrpizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/falls_1.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/house_1.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/leeeeena.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/leena.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/lena.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/lena_test.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/mountainsshifted.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/ppmwrite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/prague.binary.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/shifter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/test10.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/test11.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/test12.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/test123.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/test9.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/testlkh3.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/tree_1.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/tree_1shifted.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/west_1.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ppm-converter/west_1shifted.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppm-converter" beforeDir="false" afterPath="$PROJECT_DIR$/ppm-converter" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +51,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="76533" />
+    <option name="totalTimeSeconds" value="76811" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -141,7 +146,7 @@
       <workItem from="1574924971417" duration="253000" />
       <workItem from="1574925383859" duration="327000" />
       <workItem from="1575016342883" duration="8880000" />
-      <workItem from="1575186336794" duration="3673000" />
+      <workItem from="1575186336794" duration="3949000" />
     </task>
     <task id="LOCAL-00001" summary="final">
       <created>1574647528961</created>
@@ -171,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574878083017</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Final report">
+      <created>1575190233596</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575190233596</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +258,7 @@
     <MESSAGE value="final" />
     <MESSAGE value="Remove unnecessary file" />
     <MESSAGE value="update report progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="update report progress" />
+    <MESSAGE value="Final report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final report" />
   </component>
 </project>
