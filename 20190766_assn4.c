@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -43,7 +44,9 @@ shift_t NCC(image img, int mode); //Normalized Cross Correlation
 
 int main() {
     int choice;
+#ifdef DEBUG
     double begin, end;
+#endif
     shift_t r_shift, g_shift; //red and green shift data
     char filename[LENGTH], temp[LENGTH]; //file names
     char outfile[LENGTH];
@@ -64,12 +67,14 @@ int main() {
                 printf("이미지 이름:");
                 scanf("%s", temp);
                 if ((fp = fopen(temp, "r")) == NULL) { //try to open file, failed > return to menu
-                    printf("Unable to open image\nReturning Main menu\n\n");
+                    printf("\nUnable to open image\nReturning Main menu\n");
                     break;
                 }
                 if (img != NULL) { //if img is loaded
                     free_img(img); //free it
+
                     if ((img = read_ppm(fp)) != NULL) { //read img, if fail print error
+
                         printf("이미지 변경을 완료했습니다.\n");
                         strcpy(filename, temp); //change display filename (case for img is loaded, but change target is unable to open)
                         break;
@@ -90,17 +95,21 @@ int main() {
                     printf("Error: Image is not loaded\nReturning Main menu\n\n");
                     break;
                 }
-                printf("Calculating...\n");
-                begin = clock(); //elapsed time for benchmark
+#ifdef DEBUG
+            printf("Calculating...\n");
+            begin = clock(); //elapsed time for benchmark
+#endif
                 r_shift = SSD(img, RED); //calc shift for each channel
                 g_shift = SSD(img, GREEN);
+#ifdef DEBUG
                 printf("Elapsed time: %.3f sec\n", (clock() - begin) / CLOCKS_PER_SEC); //print elapsed time
+#endif
                 image ssd = fill_image(img, r_shift, g_shift); //fill image with given shifts
                 strcpy(temp, filename); //copy file name to temp for strtok
                 //make file name with sprintf, strtok will cut file name before .ppm
                 sprintf(outfile, "%s_%s_R%d_%d_G%d_%d.ppm", strtok(temp, "."), "SSD", r_shift.x, r_shift.y, g_shift.x, g_shift.y);
                 write_ppm(ssd, outfile); //write image to ppm file
-                printf("===================\n");
+                printf("\n===================\n");
                 printf("SSD - R:[%d, %d] G:[%d, %d]\n결과 이미지 파일: %s\n", r_shift.x, r_shift.y, g_shift.x, g_shift.y, outfile);
                 printf("===================\n");
                 free_img(ssd); //free ssd image after all done
@@ -111,17 +120,20 @@ int main() {
                     printf("Error: Image is not loaded\nReturning Main menu\n\n");
                     break;
                 }
+#ifdef DEBUG
                 printf("Calculating...\n");
                 begin = clock();
+#endif
                 r_shift = NCC(img, RED);
                 g_shift = NCC(img, GREEN);
-                end = clock();
-                printf("Elapsed time: %.3f sec\n", (end - begin) / CLOCKS_PER_SEC);
+#ifdef DEBUG
+                printf("Elapsed time: %.3f sec\n", (clock() - begin) / CLOCKS_PER_SEC);
+#endif
                 image ncc = fill_image(img, r_shift, g_shift);
                 strcpy(temp, filename);
                 sprintf(outfile, "%s_%s_R%d_%d_G%d_%d.ppm", strtok(temp, "."), "NCC", r_shift.x, r_shift.y, g_shift.x, g_shift.y);
                 write_ppm(ncc, outfile);
-                printf("===================\n");
+                printf("\n===================\n");
                 printf("NCC - R:[%d, %d] G:[%d, %d]\n결과 이미지 파일: %s\n", r_shift.x, r_shift.y, g_shift.x, g_shift.y, outfile);
                 printf("===================\n");
                 free_img(ncc);
@@ -168,7 +180,8 @@ image fill_image(image img, shift_t red_shift, shift_t green_shift) {
     int xs = MAX(MAX(red_shift.x, green_shift.x), 0);//max x start coordinate (+ is right -> max)
     int ys = MIN(MIN(red_shift.y, green_shift.y), 0);//min y start coordinate (- is down -> min)
     unsigned int walk_x, walk_y, width, height;
-    width = red_shift.x * green_shift.x < 0 ? img->width - abs(red_shift.x) - abs(green_shift.x) : img->width - MAX(abs(red_shift.x),abs(green_shift.x)); //calc new width and height
+    width = red_shift.x * green_shift.x < 0 ? img->width - abs(red_shift.x) - abs(green_shift.x) : img->width - MAX(abs(red_shift.x),
+                                                                                                                    abs(green_shift.x)); //calc new width and height
     height = (red_shift.y * green_shift.y < 0) ? img->height - abs(red_shift.y) - abs(green_shift.y) : img->height - MAX(abs(red_shift.y), abs(green_shift.y));
     image adjusted = alloc_img(width, height); //alloc registered image
     for (walk_x = 0; walk_x < adjusted->width; walk_x++) { //walk through all pixels (of registered)
@@ -176,7 +189,7 @@ image fill_image(image img, shift_t red_shift, shift_t green_shift) {
             //get shifted pixel value
             adjusted->data[walk_y * adjusted->width + walk_x][0] = get_rgb(img, 0, walk_x + xs - red_shift.x, walk_y + red_shift.y - ys);
             adjusted->data[walk_y * adjusted->width + walk_x][1] = get_rgb(img, 1, walk_x + xs - green_shift.x, walk_y + green_shift.y - ys);
-            adjusted->data[walk_y * adjusted->width + walk_x][2] = get_rgb(img, 2, walk_x + xs, walk_y + abs(ys));
+            adjusted->data[walk_y * adjusted->width + walk_x][2] = get_rgb(img, 2, walk_x + xs, walk_y - ys);
         }
     }
     return adjusted;
@@ -230,7 +243,7 @@ shift_t SSD(image img, const int mode) { //MODE 0 Red 2 Green
 shift_t NCC(image img, const int mode) { //MODE 0 Red 2 Green
     unsigned int I1, I2, walk_x, walk_y;
     int shift_x, shift_y;
-    unsigned long long sumI12, sumI1sq, sumI2sq;
+    unsigned long long sumI12, sumI1sq, sumI2sq; //unsigned int is enough for given test set, but img larger than 512*512 need bigger data type
     double eval;
     shift_t sft = {-15, -15, -1}; //min evaluation is -1
     for (shift_x = -15; shift_x < 16; shift_x++) { //walk through all shift

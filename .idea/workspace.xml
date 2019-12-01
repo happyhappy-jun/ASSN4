@@ -15,7 +15,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da62c182-006d-464a-bec4-225619a45c4d" name="Default Changelist" comment="update report progress">
+      <change afterPath="$PROJECT_DIR$/Image/image_change.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/invalid_input.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/lena.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/lenancc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/normale_process.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/test5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/test5ncc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/test5ssd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/wrong_image.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20190766_assn4.c" beforeDir="false" afterPath="$PROJECT_DIR$/20190766_assn4.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assn4.md" beforeDir="false" afterPath="$PROJECT_DIR$/assn4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ASSN4" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ASSN4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/20190766_assn4.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/20190766_assn4.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ASSN4.dir/tester.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test1_SSD_R0_2_G0_2.ppm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tester.c" beforeDir="false" afterPath="$PROJECT_DIR$/tester.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +46,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="65068" />
+    <option name="totalTimeSeconds" value="76533" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -63,12 +82,12 @@
     <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.sanitizers" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Image" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cmake-build-debug" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Image" />
       <recent name="$PROJECT_DIR$/cmake-build-debug" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -91,6 +110,9 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
@@ -115,7 +137,11 @@
       <workItem from="1574650708578" duration="179000" />
       <workItem from="1574673418760" duration="2360000" />
       <workItem from="1574765960103" duration="1869000" />
-      <workItem from="1574820041411" duration="4226000" />
+      <workItem from="1574820041411" duration="5967000" />
+      <workItem from="1574924971417" duration="253000" />
+      <workItem from="1574925383859" duration="327000" />
+      <workItem from="1575016342883" duration="8880000" />
+      <workItem from="1575186336794" duration="3673000" />
     </task>
     <task id="LOCAL-00001" summary="final">
       <created>1574647528961</created>
